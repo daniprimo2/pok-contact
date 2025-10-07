@@ -1,0 +1,58 @@
+{
+  "AuthProvider": {
+    "type": "context",
+    "package": "src/hooks/useAuth.tsx",
+    "status": "complete"
+  },
+  "LoginPage": {
+    "type": "frontend",
+    "route": "/login",
+    "package": "src/app/login/page.tsx",
+    "status": "complete"
+  },
+  "RegisterPage": {
+    "type": "frontend",
+    "route": "/register",
+    "package": "src/app/register/page.tsx",
+    "status": "complete"
+  },
+  "DashboardPage": {
+    "type": "frontend",
+    "route": "/dashboard",
+    "package": "src/app/dashboard/page.tsx",
+    "status": "complete"
+  },
+  "PublicarPage": {
+    "type": "frontend",
+    "route": "/publicar",
+    "package": "src/app/publicar/page.tsx",
+    "status": "complete"
+  },
+  "MeusProdutosPage": {
+    "type": "frontend",
+    "route": "/meus-produtos",
+    "package": "src/app/meus-produtos/page.tsx",
+    "status": "complete"
+  },
+  "PerfilPage": {
+    "type": "frontend",
+    "route": "/perfil",
+    "package": "src/app/perfil/page.tsx",
+    "status": "complete"
+  },
+  "Header": {
+    "type": "component",
+    "package": "src/components/layout/Header.tsx",
+    "status": "complete"
+  },
+  "ProductCard": {
+    "type": "component",
+    "package": "src/components/produto/ProductCard.tsx",
+    "status": "complete"
+  },
+  "ProductFilters": {
+    "type": "component",
+    "package": "src/components/produto/ProductFilters.tsx",
+    "status": "complete"
+  }
+}

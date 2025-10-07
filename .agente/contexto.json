@@ -1,0 +1,55 @@
+{
+  "$schema": "https://example.com/schemas/contexto.schema.json",
+  "schemaVersion": 1,
+  "language": "web",
+  "framework": "next.js",
+  "architecture": "ssr",
+  "versions": {
+    "next": "15.5.4",
+    "react": "19.1.0",
+    "typescript": "5",
+    "tailwind": "4",
+    "dependencies": {
+      "clsx": "^2.0.0",
+      "tailwind-merge": "^2.0.0",
+      "lucide-react": "^0.300.0",
+      "@headlessui/react": "^1.7.0"
+    }
+  },
+  "testing": {
+    "unit": "vitest",
+    "coverage_min": 80
+  },
+  "infrastructure": {
+    "containers": false,
+    "ci": "none",
+    "deployment": "vercel"
+  },
+  "api": {
+    "style": "mock",
+    "authentication": "jwt-localstorage",
+    "backend": "future-spring-boot"
+  },
+  "features": {
+    "implemented": [
+      "authentication",
+      "user-registration",
+      "product-listing",
+      "product-filtering",
+      "product-creation",
+      "product-management",
+      "profile-management",
+      "responsive-design",
+      "mock-data-system",
+      "navigation-system",
+      "contact-functionality"
+    ],
+    "pending": [
+      "real-backend-integration",
+      "image-upload-service",
+      "notification-system",
+      "advanced-search"
+    ]
+  },
+  "updatedAt": "2025-10-07T02:20:00Z"
+}

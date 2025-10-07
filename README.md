@@ -1,36 +1,195 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Contact B2B - MVP Marketplace para Lojistas
 
-## Getting Started
+![Contact B2B](https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=400&fit=crop&q=80)
 
-First, run the development server:
+> **Plataforma B2B para compartilhamento e negociação de estoques de produtos eletrônicos entre lojistas**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📋 Visão Geral
+
+Contact B2B é um marketplace que conecta lojistas para compartilhamento e negociação de estoques de produtos eletrônicos (celulares, notebooks e acessórios). Esta é a implementação do MVP (Minimum Viable Product) para validação do conceito.
+
+### 🎯 Objetivos do MVP
+- ✅ Permitir publicação de produtos pelos lojistas
+- ✅ Criar feed público de produtos disponíveis
+- ✅ Implementar sistema de filtros avançados
+- ✅ Facilitar contato entre lojistas interessados
+- ✅ Sistema de gestão de perfil e produtos
+
+## 🚀 Tecnologias Utilizadas
+
+### Frontend
+- **Next.js 15.5.4** - Framework React com SSR
+- **React 19.1.0** - Biblioteca para interfaces
+- **TypeScript 5** - Tipagem estática
+- **Tailwind CSS 4** - Framework CSS utilitário
+- **Lucide React** - Biblioteca de ícones
+- **Headless UI** - Componentes acessíveis
+
+### Design System
+- **Gradientes inspirados na tela de referência** (azul/roxo/verde)
+- **Glass morphism** e efeitos modernos
+- **Responsivo mobile-first**
+- **Animações suaves** e micro-interações
+
+## 🎨 Design e Interface
+
+### Paleta de Cores
+```css
+/* Gradiente Principal */
+--primary-gradient: linear-gradient(135deg, #14b8a6 0%, #3b82f6 50%, #8b5cf6 100%);
+
+/* Cores Principais */
+--primary-teal: #14b8a6;
+--primary-blue: #3b82f6;
+--primary-purple: #8b5cf6;
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Características do Design
+- **Inspirado na tela de login fornecida** com gradientes suaves
+- **Interface moderna** com glass morphism e sombras
+- **Componentes reutilizáveis** seguindo design system
+- **Acessibilidade** com foco e navegação por teclado
+- **Responsividade** completa para todos os dispositivos
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Funcionalidades Implementadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🔐 Autenticação
+- **Login/Registro** com validação em tempo real
+- **Persistência** via localStorage
+- **Redirecionamento** automático baseado no status
 
-## Learn More
+### 🏪 Gestão de Produtos
+- **Publicação** com upload múltiplo de imagens
+- **Listagem** com cards visuais e informações detalhadas
+- **Filtros avançados** por localização, preço, categoria
+- **Busca textual** em tempo real
+- **Gestão de status** (disponível, reservado, vendido)
 
-To learn more about Next.js, take a look at the following resources:
+### 👤 Perfil do Lojista
+- **Edição de dados** pessoais e empresa
+- **Alteração de senha** com validação
+- **Histórico da conta** e informações
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📱 Interface Responsiva
+- **Header dinâmico** com navegação adaptável
+- **Sidebar de filtros** retrátil no mobile
+- **Cards de produto** otimizados para touch
+- **Modais** para detalhes e ações
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚦 Como Executar
 
-## Deploy on Vercel
+### Pré-requisitos
+- Node.js 18+ 
+- npm ou yarn
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Instalação
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/mvp-contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Entre no diretório
+cd mvp-contact
+
+# Instale as dependências
+npm install
+
+# Execute o projeto
+npm run dev
+```
+
+### Acessar a aplicação
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
+
+## 🔑 Credenciais de Demo
+
+Para testar a aplicação, use as seguintes credenciais:
+
+```
+Email: joao@loja.com
+Senha: senha123
+```
+
+Ou crie uma nova conta através da página de registro.
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── app/                    # Pages (App Router)
+│   ├── dashboard/         # Feed de produtos
+│   ├── login/            # Página de login
+│   ├── register/         # Cadastro de usuário
+│   ├── publicar/         # Publicação de produtos
+│   ├── meus-produtos/    # Gestão de produtos
+│   └── perfil/          # Perfil do lojista
+├── components/           # Componentes reutilizáveis
+│   ├── ui/              # Componentes base (Button, Input, Card, Modal)
+│   ├── layout/          # Layout (Header, Footer)
+│   └── produto/         # Componentes de produto
+├── hooks/               # Custom hooks
+│   └── useAuth.tsx      # Context de autenticação
+├── lib/                 # Utilitários
+│   ├── utils.ts         # Funções auxiliares
+│   └── mockData.ts      # Dados de desenvolvimento
+└── types/               # Definições TypeScript
+    └── index.ts         # Interfaces e tipos
+```
+
+## 📊 Dados Mock
+
+O sistema utiliza dados mockados para desenvolvimento:
+
+### Lojistas
+- **João Silva** (Tech Store SP) - São Paulo/SP
+- **Maria Santos** (Eletro Shop RJ) - Rio de Janeiro/RJ  
+- **Pedro Costa** (Digitech MG) - Belo Horizonte/MG
+
+### Produtos
+- **Celulares**: iPhone 15 Pro Max, Samsung Galaxy S24 Ultra
+- **Notebooks**: MacBook Air M2, Dell XPS 13, Lenovo ThinkPad
+- **Acessórios**: AirPods Pro, Mouse Logitech, Carregadores
+
+## 🎯 Próximos Passos (Roadmap)
+
+### Fase 2 - Backend Integration
+- [ ] API Spring Boot
+- [ ] Banco PostgreSQL
+- [ ] Autenticação JWT real
+- [ ] Upload de imagens (AWS S3)
+
+### Fase 3 - Funcionalidades Avançadas
+- [ ] Sistema de notificações
+- [ ] Chat entre lojistas
+- [ ] Histórico de transações
+- [ ] Analytics e relatórios
+
+### Fase 4 - Melhorias
+- [ ] Busca por geolocalização
+- [ ] Sistema de avaliações
+- [ ] APP mobile (React Native)
+- [ ] Integração com marketplaces
+
+## 🤝 Contribuindo
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 👨‍💻 Desenvolvimento
+
+Desenvolvido seguindo as melhores práticas de:
+- **Clean Code** e princípios SOLID
+- **Design System** consistente
+- **Responsividade** e acessibilidade
+- **Performance** otimizada
+- **TypeScript** para type safety
+
+---
+
+**Contact B2B MVP** - Conectando lojistas, impulsionando negócios 🚀

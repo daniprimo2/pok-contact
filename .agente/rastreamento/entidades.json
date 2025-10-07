@@ -1,0 +1,22 @@
+{
+  "Lojista": {
+    "package": "src/types/index.ts",
+    "fields": ["id", "nome", "email", "empresa", "telefone", "cidade", "estado", "cep", "createdAt", "updatedAt", "ativo"],
+    "status": "complete"
+  },
+  "Produto": {
+    "package": "src/types/index.ts",
+    "fields": ["id", "lojistaId", "nome", "descricao", "modelo", "cor", "preco", "quantidade", "status", "fotos", "categoria", "createdAt", "updatedAt", "ativo"],
+    "status": "complete"
+  },
+  "FiltrosProdutos": {
+    "package": "src/types/index.ts",
+    "fields": ["cidade", "estado", "precoMin", "precoMax", "categoria", "status", "busca"],
+    "status": "complete"
+  },
+  "AuthState": {
+    "package": "src/types/index.ts",
+    "fields": ["lojista", "token", "loading", "error"],
+    "status": "complete"
+  }
+}
